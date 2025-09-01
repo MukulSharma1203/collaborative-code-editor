@@ -26,17 +26,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider appearance={{ baseTheme: dark, layout: { unsafe_disableDevelopmentModeWarnings: true, }, }}>
-      <html lang="en">
 
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en">
+
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ClerkProvider appearance={{ baseTheme: dark, layout: { unsafe_disableDevelopmentModeWarnings: true, }, }}>
           {children}
           <script src="https://cdn.lordicon.com/lordicon.js"></script>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=exit_to_app" />
-        </body>
+        </ClerkProvider>
+      </body>
 
-      </html>
-    </ClerkProvider>
+    </html>
+
 
   );
 }

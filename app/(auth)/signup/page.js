@@ -12,7 +12,7 @@ export default function Signup() {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
         <div className="max-w-3xl text-center">
-          <SignUp routing="hash" signInUrl='/signin' />
+          <SignUp routing="hash" signInUrl='/signin' forceRedirectUrl='/dashboard'/>
         </div>
       </div>
     </div>
